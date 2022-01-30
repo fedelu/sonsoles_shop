@@ -30,7 +30,8 @@ const Navbar = () => {
                     Contactanos
                 </NavLink>
                 <NavBtn>
-                    <NavBtnLink to="/carrito">Carrito</NavBtnLink>                
+                    <NavBtnLink to="/carrito"><img src="https://image.shutterstock.com/image-vector/shopping-icon-vector-eps-10-260nw-577687270.jpg"></img>
+                    </NavBtnLink>                
                 </NavBtn>
             </NavMenu> 
            </Nav> 
