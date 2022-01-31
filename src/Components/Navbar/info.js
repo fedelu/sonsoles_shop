@@ -10,6 +10,10 @@ import {
 
 import React from "react";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+
+
 const Navbar = () => {
     return (
         <>
@@ -30,7 +34,7 @@ const Navbar = () => {
                     Contactanos
                 </NavLink>
                 <NavBtn>
-                    <NavBtnLink to="/carrito"><img src="https://image.shutterstock.com/image-vector/shopping-icon-vector-eps-10-260nw-577687270.jpg"></img>
+                    <NavBtnLink to="/carrito"><FontAwesomeIcon icon={faShoppingCart} />
                     </NavBtnLink>                
                 </NavBtn>
             </NavMenu> 

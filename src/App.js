@@ -19,9 +19,8 @@ function App() {
         <Route path="/carrito" element={<Carrito />} />
       </Routes>
     </Router>
-
-
-    <itemlistcontainer Greeting="Bienvenidos"/></>
+    <itemlistcontainer Greeting ="Bienvenidos"/>
+    </>
 
   );
 }
