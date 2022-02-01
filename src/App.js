@@ -6,12 +6,12 @@ import Home from "./pages/home";
 import Nosotros from "./pages/nosotros";
 import Contactanos from "./pages/contactanos";
 import Carrito from "./pages/carrito";
-import Greeting from "./Components/greeting";
+import ItemListContainer from "./Components/itemListContainer";
 
 function App() {
   return (
     <><Router>
-      <Navbar />
+      <Navbar/>
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/nosotros" element={<Nosotros />} />
@@ -19,7 +19,9 @@ function App() {
         <Route path="/carrito" element={<Carrito />} />
       </Routes>
     </Router>
-    <itemlistcontainer Greeting ="Bienvenidos"/>
+    <div>
+    <ItemListContainer greeting ="Bienvenidos"/>
+    </div>
     </>
 
   );
