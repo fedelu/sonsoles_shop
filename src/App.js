@@ -6,7 +6,7 @@ import Home from "./pages/home";
 import Nosotros from "./pages/nosotros";
 import Contactanos from "./pages/contactanos";
 import Carrito from "./pages/carrito";
-import ItemListContainer from "./Components/itemListContainer";
+import ItemListContainer from "./Components/ItemListContainer";
 
 function App() {
   return (

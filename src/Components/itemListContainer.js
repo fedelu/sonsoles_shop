@@ -1,9 +1,18 @@
-import react from "react";
+import React from "react";
 import './greeting.css'
+import ItemCount from "./ItemCount";
+
 
 function ItemListContainer({greeting}) {
+    function AgregarItem (contador) {
+        console.log (contador)
+    }
     return (
-           <h1 className="greeting1"> {greeting}</h1>
+           <div>
+               <h1 className="greeting1"> {greeting}</h1>
+               <ItemCount stock={4} initial={1} onAdd={AgregarItem}/> 
+           </div>
+        
     )
 };
 
