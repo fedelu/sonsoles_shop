@@ -3,6 +3,7 @@ import './greeting.css'
 import ItemCount from "./ItemCount";
 import { getProductos } from "../api/api";
 import ItemList from "./ItemList";
+import './ItemList.css'
 
 
 

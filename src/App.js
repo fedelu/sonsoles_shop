@@ -7,6 +7,7 @@ import Nosotros from "./pages/nosotros";
 import Contactanos from "./pages/contactanos";
 import Carrito from "./pages/carrito";
 import ItemListContainer from "./Components/ItemListContainer";
+import ItemDetailContainer from "./Components/ItemDetailContainer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
     </Router>
     <div>
     <ItemListContainer greeting ="Bienvenidos"/>
+    <ItemDetailContainer/>
     </div>
     </>
 
