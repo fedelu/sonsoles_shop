@@ -18,14 +18,20 @@ const Navbar = () => {
     return (
         <>
            <Nav>
-            <NavLogo to="/home">
+            <NavLogo to="/">
                 Sonsoles
             </NavLogo>
             <Bars />
 
             <NavMenu>
-                <NavLink to="/home">
+                <NavLink to="/">
                     Home
+                </NavLink>
+                <NavLink to="/categoria/botas">
+                    Botas
+                </NavLink>
+                <NavLink to="/categoria/sandalias">
+                    Sandalias
                 </NavLink>
                 <NavLink to="/nosotros">
                     Nosotros
