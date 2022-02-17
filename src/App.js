@@ -9,10 +9,12 @@ import Carrito from "./pages/carrito";
 import ItemDetailContainer from "./Components/ItemDetailContainer";
 import ItemListContainer from "./Components/ItemListContainer";
 import {Link} from "react-router-dom";
+import CartContextProvider from './context/CartContext';
 
 
 function App() {
   return (
+    <CartContextProvider>
     <><Router>
       <Navbar/>
       <Routes>
@@ -26,6 +28,7 @@ function App() {
       </Routes>
     </Router>
     </>
+    </CartContextProvider>
 
   );
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import './greeting.css'
-import ItemCount from "./ItemCount";
 import { getProductos } from "../api/api";
 import ItemList from "./ItemList";
 import './ItemList.css'
@@ -29,9 +28,7 @@ getProductos().then((productos) =>{
         console.log(error);
     });
     },[categoriaNombre]);
-    function AgregarItem (contador) {
-        console.log (contador)
-    }
+   
     return (
            <div>
                <h1 className="greeting1"> {greeting}</h1>

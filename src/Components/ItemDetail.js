@@ -1,15 +1,19 @@
 import ItemCount from "./ItemCount";
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
 export default function Item({ producto }){
     const [itemCount, setItemCount] = useState (undefined);
+    const {addToCart, cart} = useContext(CartContext)
 
-    function AgregarItem (newItemCount) {
-        setItemCount(newItemCount);
-    }
+    const onAdd = (cantidad) => {
+        setItemCount(cantidad);
+        addToCart(cantidad, producto)
+    };
 
-    
+    console.log (cart);
+
     return (
     <div>
         <div>
@@ -21,7 +25,7 @@ export default function Item({ producto }){
         <div>
             {
                 !itemCount ?
-                <ItemCount stock={4} initial={1} onAdd={AgregarItem}/> :
+                <ItemCount stock={4} initial={1} onAdd={onAdd}/> :
                 <Link to="/cart">Ir al Carrito</Link>
             }
         </div>
