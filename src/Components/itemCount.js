@@ -5,7 +5,7 @@ function ItemCount ({stock , initial, onAdd}) {
     const [contador, cambioContador] = useState (initial);
 
     function Sumar () {
-        if (contador <= stock) {
+        if (contador < stock) {
         cambioContador (contador + 1) }
         else {
         cambioContador (contador + 0) }    

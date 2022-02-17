@@ -36,7 +36,6 @@ getProductos().then((productos) =>{
            <div>
                <h1 className="greeting1"> {greeting}</h1>
                {productos.length > 0 ? <ItemList productos={productos}/> : <p>Cargando Productos </p>}
-               <ItemCount stock={4} initial={1} onAdd={AgregarItem}/> 
            </div>
         
     )
