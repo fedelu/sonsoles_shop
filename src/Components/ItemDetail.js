@@ -5,14 +5,12 @@ import { CartContext } from "../context/CartContext";
 
 export default function Item({ producto }){
     const [itemCount, setItemCount] = useState (undefined);
-    const {addToCart, cart} = useContext(CartContext)
+    const {addToCart, carrito} = useContext(CartContext)
 
     const onAdd = (cantidad) => {
         setItemCount(cantidad);
         addToCart(cantidad, producto)
     };
-
-    console.log (cart);
 
     return (
     <div>
@@ -26,7 +24,7 @@ export default function Item({ producto }){
             {
                 !itemCount ?
                 <ItemCount stock={4} initial={1} onAdd={onAdd}/> :
-                <Link to="/cart">Ir al Carrito</Link>
+                <Link to="/carrito">Ir al Carrito</Link>
             }
         </div>
     </div>

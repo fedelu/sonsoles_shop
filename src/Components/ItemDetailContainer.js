@@ -10,7 +10,6 @@ export default function ItemDetailContainer () {
         getProductos().then((items)=> {
             const item = items.find((i) => i.id === Number(itemId));
             setProducto(item)
-            console.log (itemId);
         });
     }, [itemId]);
     return (
