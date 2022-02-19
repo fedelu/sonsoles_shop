@@ -8,13 +8,16 @@ import {
     NavBtnLink,
 } from "./NavbarElements";
 
-import React from "react";
+import React, { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 
 const Navbar = () => {
+const {carrito, getTotalCarrito} = useContext(CartContext);
     return (
         <>
            <Nav>
@@ -40,8 +43,12 @@ const Navbar = () => {
                     Contactanos
                 </NavLink>
                 <NavBtn>
-                    <NavBtnLink to="/carrito"><FontAwesomeIcon icon={faShoppingCart} />
-                    </NavBtnLink>                
+                { carrito.length >= 0 &&
+                    <NavBtnLink to="/carrito"> 
+                    <span><FontAwesomeIcon icon={faShoppingCart} /></span>
+                    <span>{getTotalCarrito()}</span>
+                   </NavBtnLink>  
+                }              
                 </NavBtn>
             </NavMenu> 
            </Nav> 

@@ -17,14 +17,14 @@ export default function Item({ producto }){
         <div>
             <p className="nombre">{producto.nombre}</p>
             <p className="desripcion">{producto.descripcion}</p>
-            <p className="precio">{producto.precio}</p>
+            <span className="precio">${producto.precio}</span>
             <img src={producto.imagen} alt="Imagen del prod"/>
         </div>
         <div>
             {
                 !itemCount ?
                 <ItemCount stock={4} initial={1} onAdd={onAdd}/> :
-                <Link to="/carrito">Ir al Carrito</Link>
+                <Link to="/carrito">Terminar mi compra!</Link>
             }
         </div>
     </div>

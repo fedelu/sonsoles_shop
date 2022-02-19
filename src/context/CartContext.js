@@ -26,9 +26,25 @@ const vaciarCarrito = () => {
     setCart([]);
 };
 
+const getTotalCarrito = () =>{
+    let cantidadCarrito = 0;
+    for(let i = 0; i < carrito.length; i++){
+        cantidadCarrito += carrito[i].cantidad
+    };
+    return cantidadCarrito;
+}
+
+const getPrecioTotalCarrito = () =>{
+    let precioTotal = 0;
+    for(let i = 0; i < carrito.length; i++){
+        precioTotal += (carrito[i].precio * carrito[i].cantidad)
+    }
+    return precioTotal;
+}
+
 console.log(carrito)
     return(
-        <CartContext.Provider value={{ carrito, addToCart, vaciarCarrito, borrarUnProducto}}>
+        <CartContext.Provider value={{ carrito, addToCart, vaciarCarrito, borrarUnProducto, getTotalCarrito, getPrecioTotalCarrito}}>
             {children}
         </CartContext.Provider>
     )
