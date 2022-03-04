@@ -10,7 +10,8 @@ import ItemListContainer from "./Components/ItemListContainer";
 import {Link} from "react-router-dom";
 import CartContextProvider from './context/CartContext';
 import Carrito from "./pages/carrito";
-
+import { AddItem } from "../src/Components/admin/AddItem";
+import { EditItem } from "../src/Components/admin/EditItem";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/contactanos" element={<Contactanos />} />
         <Route path="/carrito" element={<Carrito/>} />
+        <Route path="/admin/additem" element={<AddItem/>}/>
+        <Route path="/admin/edititem/:id" element={<EditItem/>}/>
         <Route path="*"element={<div><h2>Página no encontrada</h2><Link to="/">{ '<< ' }Volver al incio </Link></div>}/>
       </Routes>
     </Router>

@@ -23,7 +23,7 @@ export default function Item({ producto }){
         <div>
             {
                 !itemCount ?
-                <ItemCount stock={4} initial={1} onAdd={onAdd}/> :
+                <ItemCount stock={producto.stock} initial={1} onAdd={onAdd}/> :
                 <Link to="/carrito">Terminar mi compra!</Link>
             }
         </div>
