@@ -13,5 +13,6 @@ export default function ItemList ({productos}) {
             }
         </div>
     );
+    
 }
 

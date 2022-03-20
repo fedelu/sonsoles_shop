@@ -33,7 +33,7 @@ const Carrito = () => {
             const orderCollection = await collection(db, "orders");
             const orderAdded = await addDoc(orderCollection, order);
             console.log(`Se procesó la orden correctamente con el ID: ${orderAdded.id}.`);
-
+            alert (`Se procesó la orden correctamente con el ID: ${orderAdded.id}.`);
             const carritoIDS = order.items.map(item => item.id);
             const itemsToUpdateQuery = await query(collection(db, "items"), where(documentId(), "in", carritoIDS)); 
             const itemsToUpdateQuerySnapshot = await getDocs(itemsToUpdateQuery); 
@@ -46,7 +46,7 @@ const Carrito = () => {
             await batch.commit(); 
 
             console.log("Stock actualizado correctamente.");
-
+            
             setCarrito([]);
 
         }
@@ -89,6 +89,10 @@ const Carrito = () => {
                         </div>
                         <div>
                             <label>Email:</label>
+                            <input type="email" name="email" onChange={handleInputChange}/>
+                        </div>
+                        <div>
+                            <label>Verificar Email:</label>
                             <input type="email" name="email" onChange={handleInputChange}/>
                         </div>
                         <button type="submit">Confirmar Compra</button>
